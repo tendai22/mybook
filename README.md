@@ -60,6 +60,21 @@ sudo apt-get install -y libatk1.0-0 libatk-bridge2.0-0 libcups2
 sudo apt-get install -y libxdamage-dev libgpm-dev libgbm-dev
 sudo apt-get install -y libxkbcommon-dev libpango-1.0 libcairo-dev
 ```
+### 日本語フォントのインストール
+
+* いくつかあるらしい(https://qiita.com/nanbuwks/items/611bf7392c3b8f0dd4ea)
+> fonts-noto-cjk  
+fonts-mplus  
+fonts-ipafont-gothic fonts-ipafont-mincho  
+fonts-ipaexfont-gothic fonts-ipaexfont-mincho  
+fonts-vlgothic  
+ttf-kochi-gothic ttf-kochi-mincho  
+ttf-sazanami-gothic ttf-sazanami-mincho  
+
+とりあえず IPAfontをインストールした
+```
+$ sudo apt-get install -y fonts-ipafont-gothic fonts-ipafont-mincho
+```
 
 
 
