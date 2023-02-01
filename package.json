@@ -1,6 +1,6 @@
 {
-  "name": "starting-forth",
-  "description": "Starting-FORTH",
+  "name": "mybook",
+  "description": "mybook",
   "version": "0.0.0",
   "author": "Norihiro Kumagai <tendai22plus@gmail.com>",
   "scripts": {
