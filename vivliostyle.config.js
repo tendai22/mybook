@@ -1,9 +1,10 @@
 module.exports = {
-  title: 'Starting-FORTH', // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
+  title: 'Sample', // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
   author: 'Norihiro Kumagai <tendai22plus@gmail.com>', // default to `author` in `package.json` or undefined.
   // language: 'ja', // default to undefined.
   // size: 'A4', // paper size.
-  theme: '@vivliostyle/theme-techbook@^0.4.1', // .css or local dir or npm package. default to undefined.
+  //theme: '@vivliostyle/theme-techbook@^0.4.1', // .css or local dir or npm package. default to undefined.
+  theme: 'mytheme', // .css or local dir or npm package. default to undefined.
   entry: [
     'manuscript.md', // `title` is automatically guessed from the file (frontmatter > first heading).
     // {
