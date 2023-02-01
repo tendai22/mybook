@@ -41,6 +41,26 @@ $ git commit -m 'Add vivlistyle files/folders.'
 
 をコピーすることになる。これで、`npm run build`でPDFファイルがビルドできるようになっているはず。
 
+## mythemeの作成
+
+* themesの下に、theme-techbookをコピーして、mythemeにリネーム
+```
+$ cd themes/packages/@vivliostyle/
+$ tar cf - ./theme-teckbook |(cd ../..; tar xvfp -)
+$ cd ../..
+$ mv theme-techbook mytheme
+```
+* theme/mythemeをvivliostyle.config.jsに登録
+```
+  theme: 'themes/mytheme',
+```
+* スタイルファイルの更新は、themes/mytheme/scssの下のtheme_common.scssを編集する。
+* 編集後、npm run watch:scssする
+```
+$ cd themes/mytheme
+$ npm run watch:scss
+```
+
 # vivliostyle のインストール
 
 > install-lib.shを参照ください。
