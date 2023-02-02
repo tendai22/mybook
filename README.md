@@ -6,7 +6,37 @@ vivliostyle の node_modules なしのテンプレートです。
 本テンプレートは
 * 自前スタイルファイル(`./mytheme`)
 
-## vivliostyle ビルド可能環境を作る
+## vivliostyle ビルド可能環境をつくる(new)
+
+> npm create book せずに作る
+
+* すでにMarkdownファイルを作成中の作業ディレクトリにて、
+* vivliostyleをインストールする(初回のみ)
+* npm create bookしておき、そこから`./node_modules`, `package.json` を既存プロジェクトにコピーする。
+```
+# ディレクトリ markdown で作業しているとする。
+$ npm create book abook
+$ cd abook
+$ tar cf - ./node_modules |(cd ../markdown; tar xvfp -)
+$ tar cf - ./package.json |(cd ../markdown; tar xvfp -)
+```
+* vivliostyle initで vivliostyle.config.jsをつくる
+```
+$ vivliostyle init
+```
+* vivliostyle.config.jsを編集して、書籍情報、サイズ、スタイルなどを入れる。
+* スタイル: 通常はどこからからコピーすればよい。
+```
+$ cd somewhere
+$ tar cf - ./themes/mytheme |(cd ../markdown; tar xvfp -)
+```
+* vivliostyle.config.js のテーマ欄
+```
+  theme: 'themes/mytheme/theme_common.css',
+```
+これでビルドできるはず。
+
+## vivliostyle ビルド可能環境を作る(old)
 
 > すでに Markdownファイルを作成し、git管理下に置いていることを想定しています(以下の例では`markdown`という名前としています)。
 
